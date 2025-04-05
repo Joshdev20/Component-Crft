@@ -372,7 +372,7 @@ const components = [
   
   // Tabs category
   {
-    id: 'tab-component',
+    id: 'tab-component-old',
     name: 'Simple Tabs',
     category: 'tabs',
     preview: (
@@ -405,7 +405,7 @@ const components = [
   
   // Tooltips category
   {
-    id: 'tooltip-component',
+    id: 'tooltip-component-old',
     name: 'Simple Tooltip',
     category: 'tooltips',
     preview: (
@@ -1205,6 +1205,245 @@ const components = [
         </p>
       </div>
     </div>
+  </div>
+</div>`
+  },
+
+  // Toast/Notification
+  {
+    id: 'toast-notification',
+    name: 'Toast Notification',
+    category: 'feedback',
+    preview: (
+      <div className="flex flex-col space-y-4">
+        <div className="fixed top-4 right-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 flex items-center gap-3">
+          <div className="flex-shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-lg bg-green-100 text-green-500">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <div className="ml-2">
+            <h4 className="text-sm font-medium text-gray-900">Success!</h4>
+            <p className="text-xs text-gray-500">Your changes have been saved successfully.</p>
+          </div>
+          <button className="ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    ),
+    code: `<div class="fixed top-4 right-4 max-w-xs bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 flex items-center gap-3">
+  <div class="flex-shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-lg bg-green-100 text-green-500">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg>
+  </div>
+  <div class="ml-2">
+    <h4 class="text-sm font-medium text-gray-900">Success!</h4>
+    <p class="text-xs text-gray-500">Your changes have been saved successfully.</p>
+  </div>
+  <button class="ml-auto">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+    </svg>
+  </button>
+</div>`
+  },
+
+  // Timeline component
+  {
+    id: 'timeline-component',
+    name: 'Vertical Timeline',
+    category: 'feedback',
+    preview: (
+      <div className="relative border-l-2 border-gray-200 ml-3 pl-8 py-2 space-y-10">
+        <div className="relative">
+          <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-12 ring-4 ring-white">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </span>
+          <h3 className="text-lg font-semibold text-gray-900">Application Submitted</h3>
+          <time className="block mb-2 text-sm font-normal text-gray-500">January 13, 2022</time>
+          <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis.</p>
+        </div>
+        <div className="relative">
+          <span className="absolute flex items-center justify-center w-8 h-8 bg-green-100 rounded-full -left-12 ring-4 ring-white">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </span>
+          <h3 className="text-lg font-semibold text-gray-900">Application Approved</h3>
+          <time className="block mb-2 text-sm font-normal text-gray-500">February 2, 2022</time>
+          <p className="text-sm text-gray-600">Etiam sit amet orci eget eros faucibus tincidunt nulla facilisi.</p>
+        </div>
+      </div>
+    ),
+    code: `<div class="relative border-l-2 border-gray-200 ml-3 pl-8 py-2 space-y-10">
+  <!-- First timeline item -->
+  <div class="relative">
+    <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-12 ring-4 ring-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    </span>
+    <h3 class="text-lg font-semibold text-gray-900">Application Submitted</h3>
+    <time class="block mb-2 text-sm font-normal text-gray-500">January 13, 2022</time>
+    <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis.</p>
+  </div>
+  
+  <!-- Second timeline item -->
+  <div class="relative">
+    <span class="absolute flex items-center justify-center w-8 h-8 bg-green-100 rounded-full -left-12 ring-4 ring-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </span>
+    <h3 class="text-lg font-semibold text-gray-900">Application Approved</h3>
+    <time class="block mb-2 text-sm font-normal text-gray-500">February 2, 2022</time>
+    <p class="text-sm text-gray-600">Etiam sit amet orci eget eros faucibus tincidunt nulla facilisi.</p>
+  </div>
+</div>`
+  },
+
+  // Breadcrumbs component
+  {
+    id: 'breadcrumbs-component',
+    name: 'Breadcrumbs',
+    category: 'navigation',
+    preview: (
+      <nav className="flex" aria-label="Breadcrumb">
+        <ol className="inline-flex items-center space-x-1 md:space-x-2">
+          <li className="inline-flex items-center">
+            <a href="#" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <div className="flex items-center">
+              <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
+              </svg>
+              <a href="#" className="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">Projects</a>
+            </div>
+          </li>
+          <li aria-current="page">
+            <div className="flex items-center">
+              <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
+              </svg>
+              <span className="ml-1 text-sm font-medium text-gray-500 md:ml-2">Project Settings</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    ),
+    code: `<nav class="flex" aria-label="Breadcrumb">
+  <ol class="inline-flex items-center space-x-1 md:space-x-2">
+    <li class="inline-flex items-center">
+      <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+        </svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">Projects</a>
+      </div>
+    </li>
+    <li aria-current="page">
+      <div class="flex items-center">
+        <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">Project Settings</span>
+      </div>
+    </li>
+  </ol>
+</nav>`
+  },
+
+  // Tooltip component
+  {
+    id: 'tooltip-component-new',
+    name: 'Tooltip',
+    category: 'tooltips',
+    preview: (
+      <div className="relative inline-block">
+        <button className="px-4 py-2 bg-gray-800 text-white rounded-md">Hover me</button>
+        <div className="absolute z-10 w-auto p-2 -mt-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow-sm -top-full left-1/2 transform -translate-x-1/2 -translate-y-2">
+          This is a tooltip
+          <div className="absolute w-3 h-3 bg-gray-900 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+        </div>
+      </div>
+    ),
+    code: `<!-- Button trigger element -->
+<div class="relative inline-block">
+  <button class="px-4 py-2 bg-gray-800 text-white rounded-md">Hover me</button>
+  
+  <!-- Tooltip -->
+  <div class="absolute z-10 w-auto p-2 -mt-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow-sm -top-full left-1/2 transform -translate-x-1/2 -translate-y-2">
+    This is a tooltip
+    <!-- Tooltip arrow -->
+    <div class="absolute w-3 h-3 bg-gray-900 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+  </div>
+</div>`
+  },
+
+  // Tab component
+  {
+    id: 'tab-component-new',
+    name: 'Tabs Interface',
+    category: 'tabs',
+    preview: (
+      <div className="w-full max-w-md mx-auto">
+        <div className="border-b border-gray-200">
+          <nav className="-mb-px flex" aria-label="Tabs">
+            <button className="w-1/3 py-4 px-1 text-center border-b-2 border-primary font-medium text-sm text-primary">
+              Profile
+            </button>
+            <button className="w-1/3 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              Settings
+            </button>
+            <button className="w-1/3 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              Messages
+            </button>
+          </nav>
+        </div>
+        <div className="py-4">
+          <p className="text-gray-700 text-sm">Your profile content goes here...</p>
+        </div>
+      </div>
+    ),
+    code: `<div class="w-full max-w-md mx-auto">
+  <!-- Tab navigation -->
+  <div class="border-b border-gray-200">
+    <nav class="-mb-px flex" aria-label="Tabs">
+      <button class="w-1/3 py-4 px-1 text-center border-b-2 border-primary font-medium text-sm text-primary">
+        Profile
+      </button>
+      <button class="w-1/3 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+        Settings
+      </button>
+      <button class="w-1/3 py-4 px-1 text-center border-b-2 border-transparent font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300">
+        Messages
+      </button>
+    </nav>
+  </div>
+  
+  <!-- Active tab content -->
+  <div class="py-4">
+    <p class="text-gray-700 text-sm">Your profile content goes here...</p>
   </div>
 </div>`
   },
