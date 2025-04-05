@@ -44,6 +44,59 @@ const components = [
 </button>`
   },
   
+  {
+    id: 'button-with-icon',
+    name: 'Buttons with Icons',
+    category: 'buttons',
+    preview: (
+      <div className="flex flex-wrap gap-3">
+        <button className="bg-primary text-white px-4 py-2 rounded-md inline-flex items-center space-x-2 hover:bg-primary/90 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+          </svg>
+          <span>Add Item</span>
+        </button>
+        
+        <button className="bg-green-500 text-white px-4 py-2 rounded-md inline-flex items-center space-x-2 hover:bg-green-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+          <span>Confirm</span>
+        </button>
+        
+        <button className="border border-gray-300 px-4 py-2 rounded-md inline-flex items-center space-x-2 hover:bg-gray-100 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+          </svg>
+          <span>Upload</span>
+        </button>
+      </div>
+    ),
+    code: `<!-- Add Button -->
+<button class="bg-primary text-white px-4 py-2 rounded-md inline-flex items-center space-x-2 hover:bg-primary/90 transition-colors">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+  </svg>
+  <span>Add Item</span>
+</button>
+
+<!-- Confirm Button -->
+<button class="bg-green-500 text-white px-4 py-2 rounded-md inline-flex items-center space-x-2 hover:bg-green-600 transition-colors">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+  </svg>
+  <span>Confirm</span>
+</button>
+
+<!-- Upload Button -->
+<button class="border border-gray-300 px-4 py-2 rounded-md inline-flex items-center space-x-2 hover:bg-gray-100 transition-colors">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+  </svg>
+  <span>Upload</span>
+</button>`
+  },
+  
   // Cards category
   {
     id: 'feature-card',
@@ -350,6 +403,35 @@ const components = [
 </div>`
   },
   
+  // Tooltips category
+  {
+    id: 'tooltip-component',
+    name: 'Simple Tooltip',
+    category: 'tooltips',
+    preview: (
+      <div className="flex items-center justify-center py-8">
+        <div className="relative inline-block group">
+          <button className="bg-primary text-white px-4 py-2 rounded-md">
+            Hover me
+          </button>
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+            <div className="text-center">This is a tooltip with helpful information.</div>
+            <div className="absolute left-1/2 -translate-x-1/2 top-full border-solid border-t-gray-900 border-t-4 border-x-transparent border-x-4 border-b-0"></div>
+          </div>
+        </div>
+      </div>
+    ),
+    code: `<div class="relative inline-block group">
+  <button class="bg-primary text-white px-4 py-2 rounded-md">
+    Hover me
+  </button>
+  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+    <div class="text-center">This is a tooltip with helpful information.</div>
+    <div class="absolute left-1/2 -translate-x-1/2 top-full border-solid border-t-gray-900 border-t-4 border-x-transparent border-x-4 border-b-0"></div>
+  </div>
+</div>`
+  },
+  
   // Avatars category 
   {
     id: 'avatar-group',
@@ -459,6 +541,157 @@ const components = [
       <a href="#" class="text-red-600 block px-4 py-2 text-sm hover:bg-gray-100">Delete</a>
     </div>
   </div>
+</div>`
+  },
+  
+  // Modals category
+  {
+    id: 'simple-modal',
+    name: 'Simple Modal Dialog',
+    category: 'modals',
+    preview: (
+      <div className="relative">
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center" style={{position: 'relative', height: '180px'}}>
+          <div className="bg-card border border-border rounded-lg shadow-lg w-full max-w-md mx-auto p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-medium text-foreground">Confirm Action</h3>
+              <button className="text-muted-foreground hover:text-foreground">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="mb-6">
+              <p className="text-sm text-muted-foreground">
+                Are you sure you want to complete this action? This action cannot be undone.
+              </p>
+            </div>
+            <div className="flex justify-end space-x-3">
+              <button className="px-4 py-2 text-sm text-foreground bg-secondary rounded-md hover:bg-secondary/80">
+                Cancel
+              </button>
+              <button className="px-4 py-2 text-sm text-white bg-primary rounded-md hover:bg-primary/90">
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    code: `<!-- Modal backdrop -->
+<div class="fixed inset-0 bg-black/30 flex items-center justify-center">
+  <!-- Modal content -->
+  <div class="bg-card border border-border rounded-lg shadow-lg w-full max-w-md mx-auto p-6">
+    <!-- Modal header -->
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="text-lg font-medium text-foreground">Confirm Action</h3>
+      <button class="text-muted-foreground hover:text-foreground">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <!-- Modal body -->
+    <div class="mb-6">
+      <p class="text-sm text-muted-foreground">
+        Are you sure you want to complete this action? This action cannot be undone.
+      </p>
+    </div>
+    <!-- Modal footer -->
+    <div class="flex justify-end space-x-3">
+      <button class="px-4 py-2 text-sm text-foreground bg-secondary rounded-md hover:bg-secondary/80">
+        Cancel
+      </button>
+      <button class="px-4 py-2 text-sm text-white bg-primary rounded-md hover:bg-primary/90">
+        Confirm
+      </button>
+    </div>
+  </div>
+</div>`
+  },
+  
+  // Tables category
+  {
+    id: 'data-table',
+    name: 'Data Table',
+    category: 'tables',
+    preview: (
+      <div className="w-full overflow-hidden rounded-lg border border-border">
+        <table className="w-full text-sm text-left">
+          <thead className="text-xs uppercase bg-muted/50">
+            <tr>
+              <th scope="col" className="px-6 py-3 font-medium">Product</th>
+              <th scope="col" className="px-6 py-3 font-medium">Category</th>
+              <th scope="col" className="px-6 py-3 font-medium">Price</th>
+              <th scope="col" className="px-6 py-3 font-medium">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-border bg-card hover:bg-muted/20">
+              <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">MacBook Pro</th>
+              <td className="px-6 py-4">Electronics</td>
+              <td className="px-6 py-4">$2,499</td>
+              <td className="px-6 py-4">
+                <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">In Stock</span>
+              </td>
+            </tr>
+            <tr className="border-b border-border bg-card hover:bg-muted/20">
+              <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">Wireless Headphones</th>
+              <td className="px-6 py-4">Audio</td>
+              <td className="px-6 py-4">$99</td>
+              <td className="px-6 py-4">
+                <span className="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Low Stock</span>
+              </td>
+            </tr>
+            <tr className="bg-card hover:bg-muted/20">
+              <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap">Monitor 27"</th>
+              <td className="px-6 py-4">Electronics</td>
+              <td className="px-6 py-4">$349</td>
+              <td className="px-6 py-4">
+                <span className="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">Out of Stock</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    ),
+    code: `<div class="w-full overflow-hidden rounded-lg border border-border">
+  <table class="w-full text-sm text-left">
+    <thead class="text-xs uppercase bg-muted/50">
+      <tr>
+        <th scope="col" class="px-6 py-3 font-medium">Product</th>
+        <th scope="col" class="px-6 py-3 font-medium">Category</th>
+        <th scope="col" class="px-6 py-3 font-medium">Price</th>
+        <th scope="col" class="px-6 py-3 font-medium">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-border bg-card hover:bg-muted/20">
+        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">MacBook Pro</th>
+        <td class="px-6 py-4">Electronics</td>
+        <td class="px-6 py-4">$2,499</td>
+        <td class="px-6 py-4">
+          <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">In Stock</span>
+        </td>
+      </tr>
+      <tr class="border-b border-border bg-card hover:bg-muted/20">
+        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">Wireless Headphones</th>
+        <td class="px-6 py-4">Audio</td>
+        <td class="px-6 py-4">$99</td>
+        <td class="px-6 py-4">
+          <span class="px-2 py-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full">Low Stock</span>
+        </td>
+      </tr>
+      <tr class="bg-card hover:bg-muted/20">
+        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">Monitor 27"</th>
+        <td class="px-6 py-4">Electronics</td>
+        <td class="px-6 py-4">$349</td>
+        <td class="px-6 py-4">
+          <span class="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">Out of Stock</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>`
   },
 ];
