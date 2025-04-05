@@ -1,0 +1,36 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Handle SPA routing (fallback for client-side routes)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache settings for assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache settings for JS and CSS files
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https://images.unsplash.com https://randomuser.me; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self';"
