@@ -1,7 +1,15 @@
 [build]
-  command = "npm run build"
+  command = "./netlify-build.sh"
   publish = "dist"
   functions = "netlify/functions"
+  
+[build.environment]
+  NODE_VERSION = "18.14.0"
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["express"]
 
 # This is necessary for a SPA with client-side routing
 [[redirects]]
