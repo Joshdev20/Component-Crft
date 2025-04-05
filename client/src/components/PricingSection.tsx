@@ -12,7 +12,7 @@ const PricingSection = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
             <div className="mb-2">
               <img 
-                src="https://images.pexels.com/photos/7473041/pexels-photo-7473041.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&dpr=1" 
+                src="https://randomuser.me/api/portraits/men/32.jpg" 
                 alt="Free Plan" 
                 className="w-16 h-16 mx-auto mb-4 rounded-full object-cover"
               />
@@ -65,7 +65,7 @@ const PricingSection = () => {
           <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
             <div className="mb-2">
               <img 
-                src="https://images.pexels.com/photos/6985003/pexels-photo-6985003.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&dpr=1" 
+                src="https://randomuser.me/api/portraits/women/44.jpg" 
                 alt="Premium Plan" 
                 className="w-16 h-16 mx-auto mb-4 rounded-full object-cover"
               />
@@ -130,7 +130,7 @@ const PricingSection = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 border-2 border-blue-600">
             <div className="mb-2">
               <img 
-                src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&dpr=1" 
+                src="https://randomuser.me/api/portraits/men/46.jpg" 
                 alt="Enterprise Plan" 
                 className="w-16 h-16 mx-auto mb-4 rounded-full object-cover"
               />
