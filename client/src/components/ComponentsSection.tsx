@@ -156,7 +156,7 @@ const components = [
     ),
     code: `<div class="bg-card border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all max-w-xs">
   <img 
-    src="product-image.jpg" 
+    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=250&q=80" 
     alt="Product" 
     class="w-full h-48 object-cover"
   />
@@ -467,22 +467,22 @@ const components = [
     code: `<div class="flex -space-x-2">
   <img 
     class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800" 
-    src="user1.jpg" 
+    src="https://randomuser.me/api/portraits/women/62.jpg" 
     alt="User 1"
   />
   <img 
     class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800" 
-    src="user2.jpg" 
+    src="https://randomuser.me/api/portraits/men/32.jpg" 
     alt="User 2"
   />
   <img 
     class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800" 
-    src="user3.jpg" 
+    src="https://randomuser.me/api/portraits/women/44.jpg" 
     alt="User 3"
   />
   <img 
     class="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800" 
-    src="user4.jpg" 
+    src="https://randomuser.me/api/portraits/men/46.jpg" 
     alt="User 4"
   />
   <div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-xs font-medium border-2 border-white dark:border-slate-800">
@@ -692,6 +692,599 @@ const components = [
       </tr>
     </tbody>
   </table>
+</div>`
+  },
+
+  // Pagination component
+  {
+    id: 'pagination-component',
+    name: 'Pagination Controls',
+    category: 'navigation',
+    preview: (
+      <nav className="flex items-center justify-center space-x-2">
+        <a href="#" className="px-3 py-1 rounded-md bg-secondary text-muted-foreground hover:bg-primary/10 transition-colors">
+          <span className="sr-only">Previous</span>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </a>
+        <a href="#" className="px-3 py-1 rounded-md bg-primary text-white">1</a>
+        <a href="#" className="px-3 py-1 rounded-md bg-secondary text-foreground hover:bg-primary/10 transition-colors">2</a>
+        <a href="#" className="px-3 py-1 rounded-md bg-secondary text-foreground hover:bg-primary/10 transition-colors">3</a>
+        <span className="px-3 py-1 text-muted-foreground">...</span>
+        <a href="#" className="px-3 py-1 rounded-md bg-secondary text-foreground hover:bg-primary/10 transition-colors">8</a>
+        <a href="#" className="px-3 py-1 rounded-md bg-secondary text-muted-foreground hover:bg-primary/10 transition-colors">
+          <span className="sr-only">Next</span>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </nav>
+    ),
+    code: `<nav class="flex items-center justify-center space-x-2">
+  <a href="#" class="px-3 py-1 rounded-md bg-secondary text-muted-foreground hover:bg-primary/10 transition-colors">
+    <span class="sr-only">Previous</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  </a>
+  <a href="#" class="px-3 py-1 rounded-md bg-primary text-white">1</a>
+  <a href="#" class="px-3 py-1 rounded-md bg-secondary text-foreground hover:bg-primary/10 transition-colors">2</a>
+  <a href="#" class="px-3 py-1 rounded-md bg-secondary text-foreground hover:bg-primary/10 transition-colors">3</a>
+  <span class="px-3 py-1 text-muted-foreground">...</span>
+  <a href="#" class="px-3 py-1 rounded-md bg-secondary text-foreground hover:bg-primary/10 transition-colors">8</a>
+  <a href="#" class="px-3 py-1 rounded-md bg-secondary text-muted-foreground hover:bg-primary/10 transition-colors">
+    <span class="sr-only">Next</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </a>
+</nav>`
+  },
+
+  // Badge component
+  {
+    id: 'badge-component',
+    name: 'Status Badges',
+    category: 'inputs',
+    preview: (
+      <div className="flex flex-wrap gap-2">
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+          Info
+        </span>
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+          Success
+        </span>
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+          Warning
+        </span>
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+          Error
+        </span>
+        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+          <svg className="mr-1.5 h-2 w-2 text-gray-500" fill="currentColor" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="3" />
+          </svg>
+          Default
+        </span>
+      </div>
+    ),
+    code: `<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+  Info
+</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+  Success
+</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+  Warning
+</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+  Error
+</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+  <svg class="mr-1.5 h-2 w-2 text-gray-500" fill="currentColor" viewBox="0 0 8 8">
+    <circle cx="4" cy="4" r="3" />
+  </svg>
+  Default
+</span>`
+  },
+
+  // Toggle Switch component
+  {
+    id: 'toggle-switch',
+    name: 'Toggle Switch',
+    category: 'inputs',
+    preview: (
+      <label className="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" className="sr-only peer" />
+        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+        <span className="ml-3 text-sm font-medium text-foreground">Toggle me</span>
+      </label>
+    ),
+    code: `<label class="relative inline-flex items-center cursor-pointer">
+  <input type="checkbox" class="sr-only peer" />
+  <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+  <span class="ml-3 text-sm font-medium text-foreground">Toggle me</span>
+</label>`
+  },
+
+  // Accordion component
+  {
+    id: 'accordion-component',
+    name: 'Simple Accordion',
+    category: 'dropdowns',
+    preview: (
+      <div className="w-full max-w-md mx-auto space-y-2">
+        <div className="border border-border rounded-md">
+          <button className="flex justify-between w-full px-4 py-3 text-left text-foreground font-medium">
+            <span>What is ComponentCraft?</span>
+            <svg className="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div className="px-4 pb-3 text-sm text-muted-foreground">
+            ComponentCraft is a collection of free Tailwind CSS components that you can copy and paste into your projects.
+          </div>
+        </div>
+        <div className="border border-border rounded-md">
+          <button className="flex justify-between w-full px-4 py-3 text-left text-foreground font-medium">
+            <span>Is it free to use?</span>
+            <svg className="w-5 h-5 text-primary transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    ),
+    code: `<div class="w-full max-w-md mx-auto space-y-2">
+  <!-- Open accordion item -->
+  <div class="border border-border rounded-md">
+    <button class="flex justify-between w-full px-4 py-3 text-left text-foreground font-medium">
+      <span>What is ComponentCraft?</span>
+      <svg class="w-5 h-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    <div class="px-4 pb-3 text-sm text-muted-foreground">
+      ComponentCraft is a collection of free Tailwind CSS components that you can copy and paste into your projects.
+    </div>
+  </div>
+  
+  <!-- Closed accordion item -->
+  <div class="border border-border rounded-md">
+    <button class="flex justify-between w-full px-4 py-3 text-left text-foreground font-medium">
+      <span>Is it free to use?</span>
+      <svg class="w-5 h-5 text-primary transform rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+    <!-- Content is hidden in closed state -->
+  </div>
+</div>`
+  },
+
+  // Progress Bar
+  {
+    id: 'progress-bars',
+    name: 'Progress Bars',
+    category: 'inputs',
+    preview: (
+      <div className="space-y-4 w-full max-w-md">
+        <div>
+          <div className="flex justify-between mb-1">
+            <span className="text-sm font-medium text-foreground">Basic</span>
+            <span className="text-sm font-medium text-foreground">50%</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2.5">
+            <div className="bg-primary h-2.5 rounded-full" style={{ width: '50%' }}></div>
+          </div>
+        </div>
+        
+        <div>
+          <div className="flex justify-between mb-1">
+            <span className="text-sm font-medium text-foreground">With Steps</span>
+            <span className="text-sm font-medium text-foreground">75%</span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2.5">
+            <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '75%' }}></div>
+          </div>
+          <div className="flex justify-between mt-2">
+            <div className="flex items-center">
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 mr-1.5"></div>
+              <span className="text-xs text-muted-foreground">Step 1</span>
+            </div>
+            <div className="flex items-center">
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 mr-1.5"></div>
+              <span className="text-xs text-muted-foreground">Step 2</span>
+            </div>
+            <div className="flex items-center">
+              <div className="w-2.5 h-2.5 rounded-full bg-gray-200 mr-1.5"></div>
+              <span className="text-xs text-muted-foreground">Step 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    code: `<!-- Basic progress bar -->
+<div>
+  <div class="flex justify-between mb-1">
+    <span class="text-sm font-medium text-foreground">Basic</span>
+    <span class="text-sm font-medium text-foreground">50%</span>
+  </div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
+  </div>
+</div>
+
+<!-- Progress bar with steps -->
+<div>
+  <div class="flex justify-between mb-1">
+    <span class="text-sm font-medium text-foreground">With Steps</span>
+    <span class="text-sm font-medium text-foreground">75%</span>
+  </div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5">
+    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+  </div>
+  <div class="flex justify-between mt-2">
+    <div class="flex items-center">
+      <div class="w-2.5 h-2.5 rounded-full bg-blue-600 mr-1.5"></div>
+      <span class="text-xs text-muted-foreground">Step 1</span>
+    </div>
+    <div class="flex items-center">
+      <div class="w-2.5 h-2.5 rounded-full bg-blue-600 mr-1.5"></div>
+      <span class="text-xs text-muted-foreground">Step 2</span>
+    </div>
+    <div class="flex items-center">
+      <div class="w-2.5 h-2.5 rounded-full bg-gray-200 mr-1.5"></div>
+      <span class="text-xs text-muted-foreground">Step 3</span>
+    </div>
+  </div>
+</div>`
+  },
+
+  // Skeleton Loader
+  {
+    id: 'skeleton-loader',
+    name: 'Skeleton Loader',
+    category: 'feedback',
+    preview: (
+      <div className="w-full max-w-md p-4 space-y-4 bg-card rounded-md">
+        <div className="flex space-x-4">
+          <div className="w-12 h-12 rounded-full bg-gray-200 animate-pulse"></div>
+          <div className="flex-1 py-1 space-y-2">
+            <div className="h-2.5 rounded bg-gray-200 animate-pulse w-3/4"></div>
+            <div className="h-2 rounded bg-gray-200 animate-pulse w-1/2"></div>
+          </div>
+        </div>
+        <div className="space-y-3">
+          <div className="h-2.5 rounded bg-gray-200 animate-pulse w-full"></div>
+          <div className="h-2.5 rounded bg-gray-200 animate-pulse w-full"></div>
+          <div className="h-2.5 rounded bg-gray-200 animate-pulse w-3/4"></div>
+        </div>
+        <div className="flex items-center space-x-2">
+          <div className="w-20 h-8 rounded bg-gray-200 animate-pulse"></div>
+          <div className="w-20 h-8 rounded bg-gray-200 animate-pulse"></div>
+        </div>
+      </div>
+    ),
+    code: `<div class="w-full max-w-md p-4 space-y-4 bg-card rounded-md">
+  <!-- Avatar and text skeleton -->
+  <div class="flex space-x-4">
+    <div class="w-12 h-12 rounded-full bg-gray-200 animate-pulse"></div>
+    <div class="flex-1 py-1 space-y-2">
+      <div class="h-2.5 rounded bg-gray-200 animate-pulse w-3/4"></div>
+      <div class="h-2 rounded bg-gray-200 animate-pulse w-1/2"></div>
+    </div>
+  </div>
+  
+  <!-- Content skeleton -->
+  <div class="space-y-3">
+    <div class="h-2.5 rounded bg-gray-200 animate-pulse w-full"></div>
+    <div class="h-2.5 rounded bg-gray-200 animate-pulse w-full"></div>
+    <div class="h-2.5 rounded bg-gray-200 animate-pulse w-3/4"></div>
+  </div>
+  
+  <!-- Button skeleton -->
+  <div class="flex items-center space-x-2">
+    <div class="w-20 h-8 rounded bg-gray-200 animate-pulse"></div>
+    <div class="w-20 h-8 rounded bg-gray-200 animate-pulse"></div>
+  </div>
+</div>`
+  },
+
+  // Stepper component
+  {
+    id: 'stepper-component',
+    name: 'Stepper Process',
+    category: 'navigation',
+    preview: (
+      <div className="flex items-center w-full max-w-md mx-auto">
+        <div className="flex items-center relative">
+          <div className="rounded-full h-8 w-8 flex items-center justify-center bg-primary text-white text-sm font-medium">1</div>
+          <div className="absolute top-0 -ml-2 text-xs font-medium text-primary w-max mt-10">Account</div>
+        </div>
+        <div className="flex-auto border-t-2 border-primary"></div>
+        <div className="flex items-center relative">
+          <div className="rounded-full h-8 w-8 flex items-center justify-center bg-primary text-white text-sm font-medium">2</div>
+          <div className="absolute top-0 -ml-10 text-xs font-medium text-primary w-max mt-10">Shipping</div>
+        </div>
+        <div className="flex-auto border-t-2 border-gray-300"></div>
+        <div className="flex items-center relative">
+          <div className="rounded-full h-8 w-8 flex items-center justify-center bg-gray-300 text-gray-600 text-sm font-medium">3</div>
+          <div className="absolute top-0 -ml-6 text-xs font-medium text-gray-500 w-max mt-10">Payment</div>
+        </div>
+      </div>
+    ),
+    code: `<div class="flex items-center w-full max-w-md mx-auto">
+  <!-- Completed step -->
+  <div class="flex items-center relative">
+    <div class="rounded-full h-8 w-8 flex items-center justify-center bg-primary text-white text-sm font-medium">1</div>
+    <div class="absolute top-0 -ml-2 text-xs font-medium text-primary w-max mt-10">Account</div>
+  </div>
+  
+  <!-- Completed connector -->
+  <div class="flex-auto border-t-2 border-primary"></div>
+  
+  <!-- Current step -->
+  <div class="flex items-center relative">
+    <div class="rounded-full h-8 w-8 flex items-center justify-center bg-primary text-white text-sm font-medium">2</div>
+    <div class="absolute top-0 -ml-10 text-xs font-medium text-primary w-max mt-10">Shipping</div>
+  </div>
+  
+  <!-- Incomplete connector -->
+  <div class="flex-auto border-t-2 border-gray-300"></div>
+  
+  <!-- Incomplete step -->
+  <div class="flex items-center relative">
+    <div class="rounded-full h-8 w-8 flex items-center justify-center bg-gray-300 text-gray-600 text-sm font-medium">3</div>
+    <div class="absolute top-0 -ml-6 text-xs font-medium text-gray-500 w-max mt-10">Payment</div>
+  </div>
+</div>`
+  },
+
+  // File Upload
+  {
+    id: 'file-upload',
+    name: 'File Upload',
+    category: 'forms',
+    preview: (
+      <div className="flex items-center justify-center w-full">
+        <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 border-gray-300">
+          <div className="flex flex-col items-center justify-center pt-5 pb-6">
+            <svg className="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+            </svg>
+            <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
+            <p className="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+          </div>
+          <input id="dropzone-file" type="file" className="hidden" />
+        </label>
+      </div>
+    ),
+    code: `<div class="flex items-center justify-center w-full">
+  <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-40 border-2 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 border-gray-300">
+    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+      <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+      </svg>
+      <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+      <p class="text-xs text-gray-500">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+    </div>
+    <input id="dropzone-file" type="file" class="hidden" />
+  </label>
+</div>`
+  },
+
+  // Stats Card
+  {
+    id: 'stats-card',
+    name: 'Stats Cards',
+    category: 'cards',
+    preview: (
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="bg-card border border-border rounded-lg p-5 shadow-sm">
+          <div className="flex items-center">
+            <div className="p-3 rounded-full bg-blue-100 text-blue-500 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-muted-foreground text-sm">Total Customers</p>
+              <p className="text-xl font-bold text-foreground">6,389</p>
+              <p className="flex items-center text-xs text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+                16.5% vs last month
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-card border border-border rounded-lg p-5 shadow-sm">
+          <div className="flex items-center">
+            <div className="p-3 rounded-full bg-green-100 text-green-500 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-muted-foreground text-sm">Revenue</p>
+              <p className="text-xl font-bold text-foreground">$23,456</p>
+              <p className="flex items-center text-xs text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+                12.3% vs last month
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-card border border-border rounded-lg p-5 shadow-sm">
+          <div className="flex items-center">
+            <div className="p-3 rounded-full bg-purple-100 text-purple-500 mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-muted-foreground text-sm">Orders</p>
+              <p className="text-xl font-bold text-foreground">1,203</p>
+              <p className="flex items-center text-xs text-red-600">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+                5.2% vs last month
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+    code: `<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+  <!-- Users stats card -->
+  <div class="bg-card border border-border rounded-lg p-5 shadow-sm">
+    <div class="flex items-center">
+      <div class="p-3 rounded-full bg-blue-100 text-blue-500 mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </div>
+      <div>
+        <p class="text-muted-foreground text-sm">Total Customers</p>
+        <p class="text-xl font-bold text-foreground">6,389</p>
+        <p class="flex items-center text-xs text-green-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+          16.5% vs last month
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Revenue stats card -->
+  <div class="bg-card border border-border rounded-lg p-5 shadow-sm">
+    <div class="flex items-center">
+      <div class="p-3 rounded-full bg-green-100 text-green-500 mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </div>
+      <div>
+        <p class="text-muted-foreground text-sm">Revenue</p>
+        <p class="text-xl font-bold text-foreground">$23,456</p>
+        <p class="flex items-center text-xs text-green-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+          12.3% vs last month
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Orders stats card -->
+  <div class="bg-card border border-border rounded-lg p-5 shadow-sm">
+    <div class="flex items-center">
+      <div class="p-3 rounded-full bg-purple-100 text-purple-500 mr-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+      </div>
+      <div>
+        <p class="text-muted-foreground text-sm">Orders</p>
+        <p class="text-xl font-bold text-foreground">1,203</p>
+        <p class="flex items-center text-xs text-red-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+          5.2% vs last month
+        </p>
+      </div>
+    </div>
+  </div>
+</div>`
+  },
+
+  // Rating component 
+  {
+    id: 'rating-component',
+    name: 'Star Rating',
+    category: 'feedback',
+    preview: (
+      <div className="flex flex-col space-y-4 max-w-md">
+        <div className="flex items-center">
+          <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <svg className="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+          </svg>
+          <p className="ml-2 text-sm font-medium text-foreground">4.0 out of 5</p>
+        </div>
+
+        <div className="flex items-center">
+          <p className="text-sm font-medium text-foreground">4 stars</p>
+          <div className="w-2/4 h-2 mx-4 bg-gray-200 rounded">
+            <div className="h-2 bg-yellow-400 rounded" style={{width: '75%'}}></div>
+          </div>
+          <p className="text-sm font-medium text-foreground">75%</p>
+        </div>
+        <div className="flex items-center">
+          <p className="text-sm font-medium text-foreground">3 stars</p>
+          <div className="w-2/4 h-2 mx-4 bg-gray-200 rounded">
+            <div className="h-2 bg-yellow-400 rounded" style={{width: '18%'}}></div>
+          </div>
+          <p className="text-sm font-medium text-foreground">18%</p>
+        </div>
+      </div>
+    ),
+    code: `<!-- Basic Star Rating -->
+<div class="flex items-center">
+  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+  </svg>
+  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+  </svg>
+  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+  </svg>
+  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+  </svg>
+  <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+  </svg>
+  <p class="ml-2 text-sm font-medium text-foreground">4.0 out of 5</p>
+</div>
+
+<!-- Rating Progress Bars -->
+<div class="flex items-center">
+  <p class="text-sm font-medium text-foreground">4 stars</p>
+  <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded">
+    <div class="h-2 bg-yellow-400 rounded" style="width: 75%"></div>
+  </div>
+  <p class="text-sm font-medium text-foreground">75%</p>
+</div>
+<div class="flex items-center">
+  <p class="text-sm font-medium text-foreground">3 stars</p>
+  <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded">
+    <div class="h-2 bg-yellow-400 rounded" style="width: 18%"></div>
+  </div>
+  <p class="text-sm font-medium text-foreground">18%</p>
 </div>`
   },
 ];

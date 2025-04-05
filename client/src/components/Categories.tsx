@@ -13,7 +13,8 @@ const categories = [
   { id: 'dropdowns', name: 'Dropdowns', count: 7, icon: 'chevron-down' },
   { id: 'tooltips', name: 'Tooltips', count: 5, icon: 'info' },
   { id: 'tabs', name: 'Tabs', count: 6, icon: 'folder' },
-  { id: 'avatars', name: 'Avatars', count: 10, icon: 'user' }
+  { id: 'avatars', name: 'Avatars', count: 10, icon: 'user' },
+  { id: 'feedback', name: 'Feedback', count: 6, icon: 'exclamation-circle' }
 ];
 
 const Categories = () => {
