@@ -12,9 +12,9 @@ const PricingSection = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
             <div className="mb-2">
               <img 
-                src="https://images.unsplash.com/photo-1679913286956-96c3f58c9e74?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&h=80&q=80" 
+                src="https://images.pexels.com/photos/7473041/pexels-photo-7473041.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&dpr=1" 
                 alt="Free Plan" 
-                className="w-16 h-16 mx-auto mb-4"
+                className="w-16 h-16 mx-auto mb-4 rounded-full object-cover"
               />
             </div>
             <h4 className="text-3xl font-semibold text-blue-600 mb-4">Free Plan</h4>
@@ -65,9 +65,9 @@ const PricingSection = () => {
           <div className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
             <div className="mb-2">
               <img 
-                src="https://images.unsplash.com/photo-1614532341490-199586c6da55?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&h=80&q=80" 
+                src="https://images.pexels.com/photos/6985003/pexels-photo-6985003.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&dpr=1" 
                 alt="Premium Plan" 
-                className="w-16 h-16 mx-auto mb-4 rounded-full"
+                className="w-16 h-16 mx-auto mb-4 rounded-full object-cover"
               />
             </div>
             <h4 className="text-3xl font-semibold mb-4">Premium Plan</h4>
@@ -130,9 +130,9 @@ const PricingSection = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 border-2 border-blue-600">
             <div className="mb-2">
               <img 
-                src="https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&h=80&q=80" 
+                src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=80&h=80&dpr=1" 
                 alt="Enterprise Plan" 
-                className="w-16 h-16 mx-auto mb-4"
+                className="w-16 h-16 mx-auto mb-4 rounded-full object-cover"
               />
             </div>
             <h4 className="text-3xl font-semibold text-blue-600 mb-4">Enterprise Plan</h4>
