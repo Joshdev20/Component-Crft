@@ -411,23 +411,23 @@ const components = [
     preview: (
       <div className="flex items-center justify-center py-8">
         <div className="relative inline-block group">
-          <button className="bg-primary text-white px-4 py-2 rounded-md">
+          <button className="bg-primary text-white px-4 py-2 rounded-md shadow-sm hover:shadow transition-all">
             Hover me
           </button>
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-            <div className="text-center">This is a tooltip with helpful information.</div>
-            <div className="absolute left-1/2 -translate-x-1/2 top-full border-solid border-t-gray-900 border-t-4 border-x-transparent border-x-4 border-b-0"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-48 p-3 bg-gray-900/95 backdrop-blur-sm text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800">
+            <div className="text-center font-medium">This is a tooltip with helpful information.</div>
+            <div className="absolute left-1/2 -translate-x-1/2 top-full border-solid border-t-gray-900 border-t-4 border-x-transparent border-x-4 border-b-0 filter drop-shadow-sm"></div>
           </div>
         </div>
       </div>
     ),
     code: `<div class="relative inline-block group">
-  <button class="bg-primary text-white px-4 py-2 rounded-md">
+  <button class="bg-primary text-white px-4 py-2 rounded-md shadow-sm hover:shadow transition-all">
     Hover me
   </button>
-  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-48 p-2 bg-gray-900 text-white text-xs rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-    <div class="text-center">This is a tooltip with helpful information.</div>
-    <div class="absolute left-1/2 -translate-x-1/2 top-full border-solid border-t-gray-900 border-t-4 border-x-transparent border-x-4 border-b-0"></div>
+  <div class="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-48 p-3 bg-gray-900/95 backdrop-blur-sm text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-800">
+    <div class="text-center font-medium">This is a tooltip with helpful information.</div>
+    <div class="absolute left-1/2 -translate-x-1/2 top-full border-solid border-t-gray-900 border-t-4 border-x-transparent border-x-4 border-b-0 filter drop-shadow-sm"></div>
   </div>
 </div>`
   },
@@ -1376,26 +1376,48 @@ const components = [
   // Tooltip component
   {
     id: 'tooltip-component-new',
-    name: 'Tooltip',
+    name: 'Interactive Tooltip',
     category: 'tooltips',
     preview: (
-      <div className="relative inline-block">
-        <button className="px-4 py-2 bg-gray-800 text-white rounded-md">Hover me</button>
-        <div className="absolute z-10 w-auto p-2 -mt-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow-sm -top-full left-1/2 transform -translate-x-1/2 -translate-y-2">
-          This is a tooltip
-          <div className="absolute w-3 h-3 bg-gray-900 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+      <div className="relative inline-block group">
+        <button className="px-4 py-2 bg-gray-800 text-white rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg transition-all">
+          <span className="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Hover me
+          </span>
+        </button>
+        <div className="absolute z-10 w-64 p-4 text-sm text-white bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-xl -top-full left-1/2 transform -translate-x-1/2 -translate-y-4 backdrop-blur-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-700">
+          <div className="font-semibold mb-1">Quick Information</div>
+          <p className="text-gray-300 text-xs">This tooltip contains helpful context and can include links or actions.</p>
+          <div className="mt-2 flex space-x-2">
+            <button className="px-2 py-1 bg-primary/90 text-white text-xs rounded hover:bg-primary transition-colors">Learn more</button>
+          </div>
+          <div className="absolute w-4 h-4 bg-gray-800 transform rotate-45 -bottom-2 left-1/2 -translate-x-1/2 border-r border-b border-gray-700"></div>
         </div>
       </div>
     ),
-    code: `<!-- Button trigger element -->
-<div class="relative inline-block">
-  <button class="px-4 py-2 bg-gray-800 text-white rounded-md">Hover me</button>
+    code: `<!-- Interactive tooltip with trigger button -->
+<div class="relative inline-block group">
+  <button class="px-4 py-2 bg-gray-800 text-white rounded-md shadow-md hover:bg-gray-700 hover:shadow-lg transition-all">
+    <span class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      Hover me
+    </span>
+  </button>
   
-  <!-- Tooltip -->
-  <div class="absolute z-10 w-auto p-2 -mt-2 text-sm font-medium text-white bg-gray-900 rounded-md shadow-sm -top-full left-1/2 transform -translate-x-1/2 -translate-y-2">
-    This is a tooltip
+  <!-- Tooltip content -->
+  <div class="absolute z-10 w-64 p-4 text-sm text-white bg-gradient-to-r from-gray-900 to-gray-800 rounded-lg shadow-xl -top-full left-1/2 transform -translate-x-1/2 -translate-y-4 backdrop-blur-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-700">
+    <div class="font-semibold mb-1">Quick Information</div>
+    <p class="text-gray-300 text-xs">This tooltip contains helpful context and can include links or actions.</p>
+    <div class="mt-2 flex space-x-2">
+      <button class="px-2 py-1 bg-primary/90 text-white text-xs rounded hover:bg-primary transition-colors">Learn more</button>
+    </div>
     <!-- Tooltip arrow -->
-    <div class="absolute w-3 h-3 bg-gray-900 transform rotate-45 -bottom-1 left-1/2 -translate-x-1/2"></div>
+    <div class="absolute w-4 h-4 bg-gray-800 transform rotate-45 -bottom-2 left-1/2 -translate-x-1/2 border-r border-b border-gray-700"></div>
   </div>
 </div>`
   },
